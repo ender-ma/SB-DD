@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SB-DD Platform - Coming Soon{% endblock %}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            margin: 20px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .coming-soon {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .description {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .launch-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .launch-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .launch-date {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .features {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            color: #666;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .contact-info {
+            background: #667eea;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-info h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .coming-soon {
+                font-size: 2.2rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SB-DD</div>
+        
+        <h1 class="coming-soon">Coming Soon</h1>
+        
+        <p class="subtitle">
+            We're building something amazing for you
+        </p>
+        
+        <div class="spinner"></div>
+        
+        <p class="description">
+            Our platform is currently under development and will be launching soon. 
+            We're working hard to bring you an exceptional experience with cutting-edge features 
+            and intuitive design.
+        </p>
+        
+        <div class="launch-info">
+            <div class="launch-text">Expected Launch:</div>
+            <div class="launch-date">Q4 2025</div>
+        </div>
+        
+        <div class="features">
+            <h3>What to Expect</h3>
+            <ul>
+                <li>Modern and intuitive user interface</li>
+                <li>Advanced data processing capabilities</li>
+                <li>Secure and reliable platform</li>
+                <li>Real-time collaboration tools</li>
+                <li>Comprehensive analytics and reporting</li>
+                <li>Mobile-responsive design</li>
+            </ul>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Stay Updated</h4>
+            <p>
+                Follow our progress and be the first to know when we launch. 
+                For inquiries or updates, please contact our development team.
+            </p>
+        </div>
+        
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
